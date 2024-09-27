@@ -9,6 +9,6 @@ export const reloadRequest = async (req, res) => {
         catch (error) {
             console.error(error);
         }
-    }, 0.1 * 60 * 1000);
+    }, process.env.MINUTES * 60 * 1000);
     res.status(200).send();
 };
